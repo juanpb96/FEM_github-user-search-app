@@ -1,16 +1,37 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useDispatch } from "react-redux";
+import { setUserData } from "../../actions/user";
+import { getUser } from "../../helpers/getUser";
 
 
 export const SearchBar = () => {
 
-    const [username, setUsername] = useState('');
+    const dispatch = useDispatch();
 
+    const [username, setUsername] = useState('');
+    const [showError, setShowError] = useState(false);
+
+    const errorRef = useRef(null);
+
+    useEffect(() => {
+        errorRef.current && errorRef.current.focus();
+    }, [errorRef, showError])
+    
     const handleInputChange = ({target}) => {
         setUsername(target.value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
+        const userData = await getUser( username.trim() );
+
+        if ( !userData ) {
+            setShowError( true );
+            return;
+        }
+
+        dispatch( setUserData( userData ) );
+        setShowError( false );
     };
 
     return (
@@ -33,6 +54,9 @@ export const SearchBar = () => {
             />
             <p 
                 className='[ search-bar__error ] [ text-error-color fw-700 ]'
+                datatype={ showError ? 'active' : undefined }
+                ref={ errorRef }
+                tabIndex='0'
             >No results</p>
             <button 
                 type='submit'
