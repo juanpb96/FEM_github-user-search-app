@@ -44,20 +44,10 @@ body {
     }
 }
 
-.mb-8 {
-    margin-bottom: 0.5rem;
-}
-
-.mb-16 {
-    margin-bottom: 1rem;
-}
-
-.mb-24{
-    margin-bottom: 1.5rem;
-}
-
-.mb-34 {
-    margin-bottom: 2.125rem;
+@each $margin-b in $bottom-margins {
+    .mb-#{$margin-b} {
+        margin-bottom: unquote(($margin-b / 16) + 'rem');
+    }
 }
 
 .ml-auto {
@@ -152,21 +142,22 @@ body {
         color: themed('text-color-primary');  
         background-color: themed('background-color-primary');
         display: grid;
+        grid-template-columns: max-content;
+        align-content: center;
         min-height: 100vh;  
         padding-inline: 1.5rem;
-        place-content: center;
     }
 }
 
 .app-header {
-    max-width: 45.625rem;
+    grid-column: 2 / span 1;
     margin-top: 2rem;
     margin-bottom: 2.25rem;
 }
 
 .app-main {
+    grid-column: 2 / span 1;
     min-width: 100%;
-    max-width: 45.625rem;
 }
 
 .theme-toggle {
@@ -239,6 +230,7 @@ body {
         & .profile__photo {
             grid-area: img;
             width: 70px;
+            border-radius: 50%;
         }
 
         & [datatype="username"] {
