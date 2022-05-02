@@ -37,9 +37,11 @@ export const GithubSearchApp = () => {
                             ref={ refTheme }
                         >{ theme === 'light' ? 'dark' : 'light' }</span>
                         {
-                            theme === 'light'
-                            ? <img className='theme-toggle__img' src='./assets/icon-moon.svg' alt='' />
-                            : <img className='theme-toggle__img' src='./assets/icon-sun.svg' alt='' />
+                            <img 
+                                className='theme-toggle__img' 
+                                src={ theme === 'light' ? './assets/icon-moon.svg' : './assets/icon-sun.svg' }
+                                alt='' 
+                            />
                         }
                     </button>
                 </header>
