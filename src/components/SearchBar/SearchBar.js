@@ -53,7 +53,7 @@ export const SearchBar = () => {
                 className='[ search-bar__input ] [ text-color-secondary fw-400 ]'
             />
             <p 
-                className='[ search-bar__error ] [ text-error-color fw-700 ]'
+                className='[ search-bar__error ] [ text-error-color fs-small fw-700 ml-auto ]'
                 datatype={ showError ? 'active' : undefined }
                 ref={ errorRef }
                 tabIndex='0'

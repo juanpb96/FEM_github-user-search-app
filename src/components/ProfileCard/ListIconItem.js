@@ -37,6 +37,7 @@ export const ListIconItem = ({ name, value }) => {
                 </svg>
             </div>
             <span>{ value ? value : 'Not Available' }</span>
+            {/* TODO: Add a condition to know if this is an anchor tag */}
         </li>
     );
 };

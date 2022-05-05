@@ -8,13 +8,7 @@ export const ProfileHeader = ({ atName, avatar, created_at, name }) => {
     ];
 
     return (
-        <header className='[ profile__header ][ mb-34 ]'>
-            <img 
-                className='profile__photo' 
-                src={ avatar ? avatar : './assets/avatar-default.png' } 
-                alt='' 
-            />
-
+        <header className='[ profile__header ]'>
             <h2 
                 className='[ title-color fs-medium fw-700 ]'
                 datatype='username'

@@ -27,8 +27,14 @@ export const ProfileCard = () => {
     ];
 
     return (
-        <article className='[ profile ] [ bg-secondary card-border ]'>
+        <article className='[ profile ] [ grid-flow ] [ bg-secondary card-border ]'>
             
+            <img 
+                className='profile__photo' 
+                src={ avatar ? avatar : './assets/avatar-default.png' } 
+                alt='' 
+            />
+
             <ProfileHeader 
                 atName={ atName }
                 avatar={ avatar }
