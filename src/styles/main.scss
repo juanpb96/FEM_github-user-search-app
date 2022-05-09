@@ -132,6 +132,7 @@ body {
 }
 
 .icon {
+    min-width: 1.25rem;
     width: 1.25rem;
 }
 
@@ -167,6 +168,30 @@ body {
     &__name {
         letter-spacing: 2.5px;
         margin-right: 1rem;
+        transition: color 0.3s ease;
+    }
+
+    &__img {
+        @include themify() {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: themed('text-color-primary');
+            transition: fill 0.3s ease;
+        }
+    }
+
+    &:hover {
+        .theme-toggle__name {
+            @include themify() {
+                color: themed('text-color-primary-active');
+            }
+        }
+
+        .theme-toggle__img {
+            @include themify() {
+                fill: themed('text-color-primary-active');
+            }
+        }
     }
 }
 
@@ -177,6 +202,7 @@ body {
     &__input {
         border: none;
         background-color: transparent;
+        flex-grow: 1;
         text-overflow: ellipsis;
         overflow: hidden;
 
@@ -233,11 +259,15 @@ body {
     &__header {
         grid-area: header;
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas: "username" 
                              "at"
                              "join-date";
         margin-bottom: 2.125rem;
+
+        & > * {
+            overflow: hidden;
+        }
 
         & [datatype="username"] {
             grid-area: username;
@@ -287,14 +317,19 @@ body {
         max-height: 1.25rem;
 
         g, path {
-            @include themify {
+            @include themify() {
                 fill: themed('text-color-secondary');
             }
         }
     }
 
     & > a {
-        text-decoration: none;
+        @include themify() {
+            color: themed('text-color-secondary');
+            text-decoration: none;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
 
         &:hover,
         &:focus {
@@ -386,17 +421,21 @@ body {
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1300px) {
     .profile {
         padding: 3rem;
+        column-gap: 2.25rem;
         grid-template-areas: "img header"
                              "img bio"
                              "img details"
                              "img icon-list";
 
         &__header {
+            column-gap: 1rem;
+            grid-template-columns: repeat(2, calc(50% - 0.5rem));
             grid-template-areas: "username join-date"
                                  "at at";
+            overflow: hidden;
 
             & [datatype="join-date"] {
                 align-self: center;
