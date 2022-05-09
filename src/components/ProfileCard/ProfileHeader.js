@@ -14,7 +14,7 @@ export const ProfileHeader = ({ atName, avatar, created_at, name }) => {
                 datatype='username'
             >{ name }</h2>
             <p 
-                className='[ text-color-primary fw-400 ]'
+                className='[ text-color-primary fw-400 fs-small ]'
                 datatype='join-date'
             >{ `Joined at ${ day } ${ month } ${ year }` }</p>
             <p 
