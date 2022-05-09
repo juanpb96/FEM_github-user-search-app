@@ -1,3 +1,5 @@
+import { getUrl } from "../../helpers/getUrl";
+
 const getIcon = (name) => {
     switch ( name ) {
         case 'location':
@@ -23,6 +25,13 @@ const getIcon = (name) => {
 };
 
 export const ListIconItem = ({ name, value }) => {
+
+    let url = '';
+
+    if (name === 'webpage' || name === 'company') {
+        url = getUrl(value, name);
+    }
+
     return (
         <li className='[ list__item ] [ fs-small ]' datatype={ !value ? 'disabled' : undefined }>
             <div className='icon'>
@@ -36,8 +45,11 @@ export const ListIconItem = ({ name, value }) => {
                     { getIcon( name ) }
                 </svg>
             </div>
-            <span>{ value ? value : 'Not Available' }</span>
-            {/* TODO: Add a condition to know if this is an anchor tag */}
+            {
+                (url)
+                ? <a href={ url }>{ value }</a>
+                : <span>{ value ? value : 'Not Available' }</span>
+            }
         </li>
     );
 };
