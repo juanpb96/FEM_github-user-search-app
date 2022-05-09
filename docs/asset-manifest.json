@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FEM_github-user-search-app/static/css/main.d9557230.css",
+    "main.js": "/FEM_github-user-search-app/static/js/main.9563c31a.js",
+    "index.html": "/FEM_github-user-search-app/index.html",
+    "main.d9557230.css.map": "/FEM_github-user-search-app/static/css/main.d9557230.css.map",
+    "main.9563c31a.js.map": "/FEM_github-user-search-app/static/js/main.9563c31a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9557230.css",
+    "static/js/main.9563c31a.js"
+  ]
+}
