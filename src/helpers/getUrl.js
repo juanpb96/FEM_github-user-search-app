@@ -1,5 +1,5 @@
-export const getUrl = (value, type = '') => {
-    if (value.includes('http') || value.includes('https')) {
+export const getUrl = (value = '', type = '') => {
+    if (!value || value.includes('http') || value.includes('https')) {
         return value;
     }
 
