@@ -31,7 +31,7 @@ export const ProfileCard = () => {
             
             <img 
                 className='profile__photo' 
-                src={ avatar ? avatar : './assets/avatar-default.png' } 
+                src={ avatar ? avatar : `${ process.env.PUBLIC_URL }/assets/avatar-default.png` } 
                 alt='' 
             />
 

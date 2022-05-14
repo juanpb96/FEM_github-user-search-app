@@ -41,7 +41,7 @@ export const SearchBar = () => {
         >
             <img 
                 className='icon'
-                src='./assets/icon-search.svg' 
+                src={`${ process.env.PUBLIC_URL }/assets/icon-search.svg`}
                 alt='' 
             />
             <input 
