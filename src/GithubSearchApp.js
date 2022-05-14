@@ -2,22 +2,22 @@ import { useEffect, useRef, useState } from 'react';
 import { Provider } from 'react-redux';
 import { ProfileCard } from './components/ProfileCard/ProfileCard';
 import { SearchBar } from './components/SearchBar/SearchBar';
+import { getTheme } from './helpers/getTheme';
 import { store } from './store/store';
 import './styles/main.scss';
 
 const bodyTag = document.querySelector('body');
 
 export const GithubSearchApp = () => {
- 
-    const initialTheme = window.matchMedia("(prefers-color-scheme: ligth)").matches;
 
-    const [theme, setTheme] = useState( initialTheme ? 'light' : 'dark');
+    const [theme, setTheme] = useState( getTheme() );
     const refTheme = useRef(null);
 
     useEffect(() => {
         const lastTheme = refTheme.current.innerText.toLowerCase();
         bodyTag.classList.add(`theme-${theme}`);
         bodyTag.classList.remove(`theme-${lastTheme}`);
+        localStorage.setItem('theme', theme);
     }, [theme]);
 
     const handleThemeToggle = () => {
