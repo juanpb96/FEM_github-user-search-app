@@ -12,7 +12,7 @@ export const ProfileHeader = ({ atName, avatar, created_at, name }) => {
             <h2 
                 className='[ title-color fs-medium fw-700 ]'
                 datatype='username'
-            >{ name }</h2>
+            >{ name ? name : atName }</h2>
             <p 
                 className='[ text-color-primary fw-400 fs-small ]'
                 datatype='join-date'
