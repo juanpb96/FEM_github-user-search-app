@@ -41,7 +41,10 @@ export const SearchBar = () => {
         }
 
         dispatch( setUserData( userData ) );
-        setErrorState('closing');
+
+        if (errorState === 'active') {
+            setErrorState('closing');
+        }
     };
 
     return (
