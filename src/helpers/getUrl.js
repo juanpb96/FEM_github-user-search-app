@@ -2,6 +2,10 @@ export const getUrl = (value = '', type = '') => {
     if (!value || value.includes('http') || value.includes('https')) {
         return value;
     }
+    
+    if (type === 'twitter') {
+        return `https://twitter.com/${ value }`;
+    }
 
     if (type === 'company') {
         if (value.charAt(0) === '@') {
@@ -11,6 +15,7 @@ export const getUrl = (value = '', type = '') => {
 
         return '';
     }
+
 
     return `http://${ value }`;
 };

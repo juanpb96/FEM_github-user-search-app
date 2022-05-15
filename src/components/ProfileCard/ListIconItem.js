@@ -28,7 +28,7 @@ export const ListIconItem = ({ name, value }) => {
 
     let url = '';
 
-    if (name === 'webpage' || name === 'company') {
+    if (name !== 'location') {
         url = getUrl(value, name);
     }
 
