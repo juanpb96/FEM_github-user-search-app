@@ -295,6 +295,10 @@ body {
 
     &__description {
         grid-area: bio;
+
+        &[datatype="no-bio"] {
+            opacity: 0.75;
+        }
     }
 }
 

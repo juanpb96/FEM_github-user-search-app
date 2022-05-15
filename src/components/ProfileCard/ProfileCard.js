@@ -44,6 +44,7 @@ export const ProfileCard = () => {
 
             <p 
                 className='[ profile__description ][ mb-24 text-color-secondary fs-small fw-400 lh-large ]'
+                datatype={ bio ? undefined : 'no-bio' }
             >{ bio ? bio : 'This profile has no bio' }</p>
             
             <DetailsCard 
