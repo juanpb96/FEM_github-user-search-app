@@ -9,13 +9,23 @@ export const SearchBar = () => {
     const dispatch = useDispatch();
 
     const [username, setUsername] = useState('');
-    const [showError, setShowError] = useState(false);
+    const [errorState, setErrorState] = useState('');
 
     const errorRef = useRef(null);
 
     useEffect(() => {
-        errorRef.current && errorRef.current.focus();
-    }, [errorRef, showError])
+        if (errorRef && errorRef.current) {
+            if (errorState === 'active') {
+                errorRef.current.focus();
+            }
+
+            if (errorState === 'closing') {
+                errorRef.current.addEventListener('animationend', () => {
+                    setErrorState('');
+                }, { once: true });
+            }
+        }
+    }, [errorRef, errorState]);
     
     const handleInputChange = ({target}) => {
         setUsername(target.value);
@@ -26,12 +36,12 @@ export const SearchBar = () => {
         const userData = await getUser( username.trim() );
 
         if ( !userData ) {
-            setShowError( true );
+            setErrorState('active');
             return;
         }
 
         dispatch( setUserData( userData ) );
-        setShowError( false );
+        setErrorState('closing');
     };
 
     return (
@@ -54,7 +64,7 @@ export const SearchBar = () => {
             />
             <p 
                 className='[ search-bar__error ] [ text-error-color fs-small fw-700 ml-auto ]'
-                datatype={ showError ? 'active' : undefined }
+                datatype={ errorState ? errorState : undefined }
                 ref={ errorRef }
                 tabIndex='0'
             >No results</p>

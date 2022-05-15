@@ -2,6 +2,7 @@
 @import './base/reset';
 @import './base/variables';
 @import './base/mixins';
+@import './base/animations';
 
 body {
     font-family: 'Space Mono', monospace;
@@ -204,6 +205,7 @@ body {
         background-color: transparent;
         flex-grow: 1;
         text-overflow: ellipsis;
+        outline: none;
         overflow: hidden;
 
         &:active,
@@ -221,6 +223,12 @@ body {
 
         &[datatype="active"] {
             display: block;
+            animation: fadeInRight 0.5s ease-in;
+        }
+
+        &[datatype="closing"] {
+            display: block;
+            animation: fadeOutRight 0.5s ease-out;
         }
     }
 }
