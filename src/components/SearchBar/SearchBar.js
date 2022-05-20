@@ -54,6 +54,8 @@ export const SearchBar = () => {
         >
             <img 
                 className='icon'
+                width='20'
+                height='20'
                 src={`${ process.env.PUBLIC_URL }/assets/icon-search.svg`}
                 alt='' 
             />
