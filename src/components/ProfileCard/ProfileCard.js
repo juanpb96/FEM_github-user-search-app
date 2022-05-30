@@ -39,7 +39,6 @@ export const ProfileCard = () => {
 
             <ProfileHeader 
                 atName={ atName }
-                avatar={ avatar }
                 created_at={ created_at }
                 name= { name }
             />

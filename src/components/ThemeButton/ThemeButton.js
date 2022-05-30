@@ -3,7 +3,7 @@ import { getTheme } from '../../helpers/getTheme';
 
 const bodyTag = document.querySelector('body');
 
-// Adding a default theme increases performance an reduce CLS of the site 
+// Adding a default theme increases performance and reduce CLS of the site 
 bodyTag.classList.add('theme-light');
 
 export const ThemeButton = () => {

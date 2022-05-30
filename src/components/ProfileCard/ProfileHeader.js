@@ -1,4 +1,4 @@
-export const ProfileHeader = ({ atName, avatar, created_at, name }) => {
+export const ProfileHeader = ({ atName, created_at, name }) => {
 
     const joinDate = new Date(created_at);
     const [ day, month, year ] = [
