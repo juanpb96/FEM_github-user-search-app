@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <SearchBar /> should render correctly 1`] = `
+<form
+  className="[ search-bar ] [ flex-flow ] [ bg-secondary card-border mb-16 ]"
+  onSubmit={[Function]}
+>
+  <img
+    alt=""
+    className="icon"
+    height="20"
+    src="/assets/icon-search.svg"
+    width="20"
+  />
+  <input
+    className="[ search-bar__input ] [ text-color-secondary fw-400 ]"
+    name="username"
+    onChange={[Function]}
+    placeholder="Search GitHub username…"
+    type="text"
+    value=""
+  />
+  <p
+    className="[ search-bar__error ] [ text-error-color fs-small fw-700 ml-auto ]"
+    tabIndex="0"
+  >
+    No results
+  </p>
+  <button
+    className="[ btn ] [ text-color-white fw-700 br-10 ml-auto ]"
+    datatype="blue"
+    type="submit"
+  >
+    Search
+  </button>
+</form>
+`;

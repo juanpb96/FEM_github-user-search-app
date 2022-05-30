@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <ProfileHeader /> should render correctly 1`] = `
+<header
+  className="[ profile__header ]"
+>
+  <h2
+    className="[ title-color fs-medium fw-700 ]"
+    datatype="username"
+  >
+    The octocat
+  </h2>
+  <p
+    className="[ text-color-primary fw-400 fs-small ]"
+    datatype="join-date"
+  >
+    Joined at 25 Jan 2011
+  </p>
+  <p
+    className="[ text-color-blue fw-400 ]"
+    datatype="at"
+  >
+    @
+    octocat
+  </p>
+</header>
+`;
+
+exports[`Test <ProfileHeader /> should replace name with atName when it is empty 1`] = `
+<header
+  className="[ profile__header ]"
+>
+  <h2
+    className="[ title-color fs-medium fw-700 ]"
+    datatype="username"
+  >
+    octocat
+  </h2>
+  <p
+    className="[ text-color-primary fw-400 fs-small ]"
+    datatype="join-date"
+  >
+    Joined at 25 Jan 2011
+  </p>
+  <p
+    className="[ text-color-blue fw-400 ]"
+    datatype="at"
+  >
+    @
+    octocat
+  </p>
+</header>
+`;

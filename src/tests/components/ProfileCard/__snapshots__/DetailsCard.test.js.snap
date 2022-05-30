@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <DetailsCard /> should render correctly 1`] = `
+<section
+  className="[ details ] [ bg-primary br-10 mb-24 ]"
+>
+  <div>
+    <p
+      className="[ mb-8 fs-xsmall ]"
+    >
+      Repos
+    </p>
+    <p
+      className="[ title-color fs-medium fw-700 ]"
+    >
+      10
+    </p>
+  </div>
+  <div>
+    <p
+      className="[ mb-8 fs-xsmall ]"
+    >
+      Followers
+    </p>
+    <p
+      className="[ title-color fs-medium fw-700 ]"
+    >
+      20
+    </p>
+  </div>
+  <div>
+    <p
+      className="[ mb-8 fs-xsmall ]"
+    >
+      Following
+    </p>
+    <p
+      className="[ title-color fs-medium fw-700 ]"
+    >
+      350
+    </p>
+  </div>
+</section>
+`;
