@@ -45,7 +45,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here](https://your-solution-url.com)
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/mobilefirst-github-user-search-app-uHlFWZ2zoO)
 - Live Site URL: [See live site here](https://juanbonilla.me/FEM_github-user-search-app/)
 
 ## My process
