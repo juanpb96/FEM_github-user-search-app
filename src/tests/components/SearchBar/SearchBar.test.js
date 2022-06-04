@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import { SearchBar } from '../../../components/SearchBar/SearchBar';
 import { Provider } from 'react-redux';
 import { setUserData } from '../../../actions/user';
-import { act, waitFor } from '@testing-library/react';
+import { act } from '@testing-library/react';
 
 jest.mock('../../../actions/user', () => ({
     setUserData: jest.fn()
