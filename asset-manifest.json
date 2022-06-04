@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/FEM_github-user-search-app/static/css/main.9b256d15.css",
-    "main.js": "/FEM_github-user-search-app/static/js/main.166fba40.js",
+    "main.js": "/FEM_github-user-search-app/static/js/main.b5aad371.js",
     "index.html": "/FEM_github-user-search-app/index.html",
     "main.9b256d15.css.map": "/FEM_github-user-search-app/static/css/main.9b256d15.css.map",
-    "main.166fba40.js.map": "/FEM_github-user-search-app/static/js/main.166fba40.js.map"
+    "main.b5aad371.js.map": "/FEM_github-user-search-app/static/js/main.b5aad371.js.map"
   },
   "entrypoints": [
     "static/css/main.9b256d15.css",
-    "static/js/main.166fba40.js"
+    "static/js/main.b5aad371.js"
   ]
 }
