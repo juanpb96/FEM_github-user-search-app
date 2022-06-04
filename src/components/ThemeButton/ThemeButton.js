@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { getTheme } from '../../helpers/getTheme';
 
-const bodyTag = document.querySelector('body');
+const bodyTag = document.body;
 
 // Adding a default theme increases performance and reduce CLS of the site 
 bodyTag.classList.add('theme-light');
