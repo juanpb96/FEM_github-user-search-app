@@ -1,6 +1,6 @@
 export const DetailsCard = ({ repos, followers, following }) => {
     return (
-        <section className='[ details ] [ bg-primary br-10 mb-24 ]'>
+        <div className='[ details ] [ bg-primary br-10 mb-24 ]'>
             <div>
                 <p className='[ mb-8 fs-xsmall ]'>Repos</p>
                 <p className='[ title-color fs-medium fw-700 ]'>{ repos }</p>
@@ -13,6 +13,6 @@ export const DetailsCard = ({ repos, followers, following }) => {
                 <p className='[ mb-8 fs-xsmall ]'>Following</p>
                 <p className='[ title-color fs-medium fw-700 ]'>{ following }</p>
             </div>
-        </section>
+        </div>
     );
 };
