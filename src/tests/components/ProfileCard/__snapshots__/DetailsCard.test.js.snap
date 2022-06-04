@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test <DetailsCard /> should render correctly 1`] = `
-<section
+<div
   className="[ details ] [ bg-primary br-10 mb-24 ]"
 >
   <div>
@@ -40,5 +40,5 @@ exports[`Test <DetailsCard /> should render correctly 1`] = `
       350
     </p>
   </div>
-</section>
+</div>
 `;
